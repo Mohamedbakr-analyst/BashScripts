@@ -38,6 +38,4 @@ for file in $1/*; do
       ;;
   esac
 
-  # Add a separator line
-  echo "----------------------------------------"
 done

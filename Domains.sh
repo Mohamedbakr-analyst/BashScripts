@@ -71,10 +71,7 @@ for i in $(seq 1 "$2"); do
   # Create a temporary file name
   temp="temp_$i.txt"
 
-  # Use multiple tools to enumerate subdomains and append to the temporary file
-  # You can use any tools you prefer, such as subfinder, amass, assetfinder, etc.
-  # Here I use subfinder as an example
-  # You may need to install the tools and configure the API keys before using them
+
   while read -r domain; do
     subfinder -d "$domain" -silent >> "$temp"
   done < "$input"
